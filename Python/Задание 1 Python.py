@@ -1,3 +1,6 @@
+# Так как словесное описание данного кода у меня вышло объемным, 
+# то я его привел в pdf документе, который отправил вместе с тестовым заданием по почте
+
 import requests
 import warnings
 from datetime import datetime, timedelta

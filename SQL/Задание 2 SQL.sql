@@ -6,4 +6,4 @@
 
 -- Здесь рассчитываю нарастающий итог (поле cumulative_sum) продолжительности сессий для игрока в минутах, причем сессии сортирую по их времени начала, а не по id сессии,
 -- так как, как я объяснял в задании № 1, бывают случаи, когда сессия с большим id начинается раньше, чем сессия с меньшим id
-select *, SUM(ABS(DATEDIFF(minute, start_time, end_time))) OVER (PARTITION BY player_id ORDER BY start_time) as cumulative_sum FROM game_sessions;
+SELECT *, SUM(ABS(DATEDIFF(minute, start_time, end_time))) OVER (PARTITION BY player_id ORDER BY start_time) as cumulative_sum FROM game_sessions;
